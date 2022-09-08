@@ -2,7 +2,7 @@
 
 /*
 
-Given production CDISC tables sdtm.dm, sdtm.vs and production ada adsl check the mappings od adsl programatically.
+Given production CDISC tables sdtm.dm, sdtm.vs and production adam.adsl check the mappings of ADaM adsl automatically.
 This done using reverse engineering the mapping without using the specs.
 
 github
