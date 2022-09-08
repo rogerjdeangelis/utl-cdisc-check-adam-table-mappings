@@ -1,25 +1,22 @@
-# utl-cdisc-check-adam-table-mappings
-Given production tables sdtm.dm, sdtm.vs and production adam sl check the mappings programatically
     %let pgm=utl-cdisc-check-adam-table-mappings;
 
     /*
 
-    Given production CDISC tables sdtm.dm, sdtm.vs and production adam sl check the mappings programatically.
-    Thi is done using reverse engineering the mapping without using the specs.
+    Given production CDISC tables sdtm.dm, sdtm.vs and production ada adsl check the mappings od adsl programatically.
+    This done using reverse engineering the mapping without using the specs.
 
     github
     https://tinyurl.com/mrf28b9j
     https://github.com/rogerjdeangelis/utl-cdisc-check-adam-table-mappings
 
-    You need  download this base64 encoded zip file and, run the macro at the end of this readme to decode.
-    Github does not work well with binary data.
+    You need  download this base64 encoded zip file and, run the macro at the end of this readme.
     https://github.com/rogerjdeangelis/utl-cdisc-check-adam-table-mappings/blob/main/smpFolDer.b64
 
     and then run this to create the 7z zip file, then unzip for the package.
 
     %utl_b64decode(d:/smp/b64/smpFolDer.b64,d:/smp/zip/smp.7z);
 
-    The voodoo macro will provide the mappings.
+    The voodoo macro will provide the mappings see d:/smp/vdo/smp_010adsl_dm_vs.txt
 
     The macro can find
 
@@ -34,7 +31,7 @@ Given production tables sdtm.dm, sdtm.vs and production adam sl check the mappin
         2. Rename all the veriables in each sdtm with the prefix domain name ie dm_age
         3. Rename all variables in the adam datasets ie adsl rename sl_studyid ...
         4. Run voodoo macro
-        5  Examine voodoo output particularly the findings above see .\smp\vdo\smp_010adsl_dm_vs.txt
+        5  Examine voodoo output particularly the findings above see .\smp\vdo\
      _                   _
     (_)_ __  _ __  _   _| |_
     | | `_ \| `_ \| | | | __|
@@ -69,11 +66,13 @@ Given production tables sdtm.dm, sdtm.vs and production adam sl check the mappin
 
     d:/smp/vdo/smp_010adsl_dm_vs.txt
 
-    The listing output from the smp_voodoo macro can be used as a check mappings.
+    The listing output from the oto_voodoo macro can be used to check the mappings.
     This is just a simple example. If you add all the SDTMs that are input to ADAM.ADSL,
-    you should be able to get almost all the ADSL vatriables= mappings.
+    you should be able to get almost all the ADSL vatriable mappings.
 
-    Using just inputs SDTM_VS and DM.
+    I am using just inputs SDTM_VS and DM as an example.
+
+    Selected voodoo output;.
 
     The following variables are uniformly evaluated with NO missing values
     a single non-missing value is present for all observations
